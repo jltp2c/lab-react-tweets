@@ -5,9 +5,7 @@ import User from "./User";
 import Message from "./Message";
 import Actions from "./Actions";
 
-function Tweet(props) {
-  const { image, name, handle } = props.tweet.user;
-  const { timestamp, message } = props.tweet;
+function Tweet({ timestamp, message , user: { image, name, handle }}) {
 
   return (
     <div className="tweet">
